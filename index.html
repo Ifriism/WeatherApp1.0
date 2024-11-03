@@ -12,15 +12,18 @@
 <body>
     <div class="weather-app">
         <header>
-    <form class="search-form">
-    <input type="search" placeholder="Enter a city..." required class="search-form-input">
+    <form class="search-form" id="search-form">
+    <input type="search"
+    placeholder="Enter a city..." required
+    id="search-form-input"
+    class="search-form-input">
     <input type="submit" value="search" class="search-form-button">
     </form>
 </header>
 <main>
     <div class="weather-app-data">
     <div>
-    <h1 class="weather-app-city">Madrid</h1>
+    <h1 class="weather-app-city" id="city">Madrid</h1>
     <h2 class="forecast">Clear sky</h2>
     <div class="day">Thursday</div>
     <div class="time-container">
@@ -50,5 +53,6 @@
         <a href="https://forecast-frenzy.netlify.app/" target="_blank">Netlify</a>
     </footer>
 </div>
+<script src="src/index.js"></script>
 </body>
 </html>
