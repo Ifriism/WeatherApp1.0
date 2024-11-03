@@ -27,7 +27,7 @@ header {
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     color: #a393eb;
 }
@@ -70,18 +70,16 @@ main {
     color: #a393eb;
  }
 
- .day {
-    font-size: 25px;
-    color: #a393eb;
-    margin-top: 15px;
-    margin-bottom: 10px;
+ .forecast {
+    text-transform: capitalize;
  }
 
 .time-container {
     text-align: left;
-    font-size: 18px;
-    color: #a393eb;
+    font-size: 16px;
+    color: rgba(95, 66, 174, 0.401);
     line-height: 25px;
+    font-weight: bold;
 
 }
 

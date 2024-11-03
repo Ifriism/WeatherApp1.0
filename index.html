@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,16 +25,13 @@
     <div class="weather-app-data">
     <div>
     <h1 class="weather-app-city" id="city"></h1>
-    <h2 class="forecast">Clear sky</h2>
-    <div class="day">Thursday</div>
-    <div class="time-container">
-    29/10/2024
-    12:40
-    </div>
+    <h2 class="forecast" id="description"></h2>
+    <span class="time-container" id="time"></span>
         <p class="weather-app-details">
-        💧 Humidity: <strong>35%</strong>
+           
+    💧 Humidity: <strong id="humidity"></strong>
             <br>
-        🌬️ Wind: <strong>2 km/h</strong>
+    🌬️ Wind: <strong id="wind-speed"></strong>
         </p>
     </div>
     <div class="weather-app-temperature-container">
