@@ -7,7 +7,7 @@ body {
       }
 
       a {
-        color: #82acff;
+        color: #2c1a7c;
 
     }
 
@@ -72,26 +72,30 @@ main {
 
  .forecast {
     text-transform: capitalize;
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 14px;
  }
 
 .time-container {
     text-align: left;
     font-size: 16px;
     color: rgba(95, 66, 174, 0.401);
-    line-height: 25px;
+    line-height: 10px;
     font-weight: bold;
+    margin-bottom: 0px;
 
 }
 
  .weather-app-details {
     font-size: 16px;
     color: rgba(95, 66, 174, 0.401);
-    line-height: 24px;
+    line-height: 22px;
     font-weight: 500;
 }
 
 strong {
-    color: rgba(95, 66, 174, 0.401);
+    color: rgba(139, 3, 173, 0.401);
     font-size: 15px;
 
 }
@@ -105,7 +109,7 @@ strong {
 .weather-app-icon {
     width: 88px;
     height: 88px;
-    
+    margin-top: 22px;
 }
 
 .weather-app-temperature {
