@@ -19,6 +19,8 @@ function refreshWeather(response) {
     timeElement.innerHTML = formatDate(date);
     temperatureElement.innerHTML = Math.round(temperature);
     iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`
+
+    getForecast(response.data.cityElement);
 }
 
 
@@ -44,7 +46,7 @@ return `${day}, ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
-    let apiKey = "fea6579f5ctf53bb7491ae80ac32o60f"
+    let apiKey = "fea6579f5ctf53bb7491ae80ac32o60f";
     let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 axios.get(apiURL).then(refreshWeather);
 }
@@ -56,7 +58,15 @@ let searchInput = document.querySelector("#search-form-input");
 searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+    let apiKey = "fea6579f5ctf53bb7491ae80ac32o60f";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+
+
     let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
     let forecastHtml = "";
 
@@ -83,5 +93,4 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Madrid"); // replaces the HTML city and temperature and defaults the city to Madrid once the page loads
-displayForecast();
 
