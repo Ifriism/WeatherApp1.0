@@ -20,7 +20,7 @@ function refreshWeather(response) {
     temperatureElement.innerHTML = Math.round(temperature);
     iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`
 
-    getForecast(response.data.cityElement);
+    getForecast(response.data.city);
 }
 
 
@@ -72,7 +72,6 @@ axios(apiUrl).then(displayForecast);
 }
 
 function displayForecast(response) {
-console.log(response.data);
 
     let forecastHtml = "";
 
@@ -87,7 +86,7 @@ console.log(response.data);
         <div class="weather-forecast-temperatures">
         <div class="weather-forecast-temperature">
         <strong>${Math.round(day.temperature.maximum)}°</strong></div>
-        <div class="weather-forecast-temperature">${Math.round$(day.temperature.minimum)}°</div>
+        <div class="weather-forecast-temperature">${Math.round(day.temperature.minimum)}°</div>
         </div>
          </div>
         `;
